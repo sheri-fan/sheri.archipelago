@@ -1,21 +1,18 @@
-# Sheri Archipelago — Main Island V1
+# Sheri Archipelago — Main Island Art V2
 
-First integrated true-3D Main Island build.
+This is the art-first 3D version.
 
 Included:
-- Island terrain
-- Message Board
-- Gacha Machine
-- Rocking Horse
-- Mailbox
-- Bench / Tea Table
+- True orbiting 3D camera
+- Brighter Southern-European sunlight
+- Painterly watercolor-style procedural materials
+- More detailed Message Board, Gacha, Rocking Horse, Mailbox, Bench/Tea Table
 - 3 tree types
-- Many flowers
-- Real orbit / zoom / pan camera
-- Real sides and backs on the major objects
-- Hover labels and simple click interactions
+- Dense mixed flowers
+- Sculpted terrain and cliff edge
+- Clouds and balloons
 
-Upload these files to the root of your GitHub Pages repository:
+Upload these files to the ROOT of the existing GitHub Pages repository:
 - index.html
 - styles.css
 - main.js
