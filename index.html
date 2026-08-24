@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sheri's Archipelago</title>
+  <title>Sheri's Archipelago — Main Island 3D</title>
   <link rel="stylesheet" href="styles.css" />
   <script type="importmap">
   {
@@ -15,29 +15,27 @@
   </script>
 </head>
 <body>
-  <div id="loader" class="loader">
-    <div class="loader-copy">
-      <div class="loader-title">Sheri's Archipelago</div>
-      <div class="loader-sub">Entering the main island…</div>
-      <div class="bar"><span></span></div>
+  <div id="loading" class="loading">
+    <div class="loading-card">
+      <div class="loading-title">Sheri's Archipelago</div>
+      <div class="loading-subtitle">Building the Main Island…</div>
+      <div class="loading-bar"><span></span></div>
     </div>
   </div>
 
   <main id="app">
-    <canvas id="world"></canvas>
-
-    <div class="hint-card">
-      <strong>Main Island</strong>
-      <span>Drag to look around · Scroll to zoom</span>
+    <canvas id="world" aria-label="Interactive 3D main island"></canvas>
+    <div class="hud top-left">
+      <strong>Main Island · True 3D</strong>
+      <span>Drag to rotate · Scroll to zoom · Right-drag to pan</span>
     </div>
-
-    <div class="mode-card">
-      Art-preserving 3D diorama
+    <div class="hud bottom-left">
+      <span>Terrain · Message Board · Gacha · Rocking Horse · Mailbox · Bench · Trees · Flowers</span>
     </div>
-
     <button id="reset" type="button">Reset view</button>
+    <div id="label" class="label" hidden></div>
+    <div id="toast" class="toast" hidden></div>
   </main>
-
   <script type="module" src="main.js"></script>
 </body>
 </html>
