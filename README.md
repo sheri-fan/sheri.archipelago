@@ -1,35 +1,27 @@
-# Hui-Ju's Island — GitHub Pages Starter
+# Sheri Archipelago — 3D Art Prototype
 
-This is a static HTML/CSS/JS prototype of the Main Island.
+This version keeps the true Three.js 3D camera and adds a stronger visual layer.
 
-## Features
-- Loading screen
-- Drag to pan around the island
-- Mouse wheel / buttons to zoom
-- Clickable hotspots
-- Message Board modal
-- Gacha interaction
-- Academic / Perfume / Art / Game Island placeholders
+## Improvements
+- Brighter Southern-European sunlight
+- Painterly procedural textures on grass, rock, wood, paper, stucco and sea
+- More detailed Message Board wall
+- Better gacha machine
+- More refined rocking horse
+- Flowers, trees, bench, mailbox and lamp
+- Softer shadows and richer depth
+- Loading screen preserved
+- Real orbit / zoom / pan camera preserved
 
-## Run locally
-Open `index.html` in a browser.
+## Upload to GitHub Pages
+Replace the current root files in your existing repository with:
+- index.html
+- styles.css
+- main.js
 
-For a local server:
-```bash
-python3 -m http.server 8000
-```
-Then visit:
-`http://localhost:8000`
+Then commit to `main`.
 
-## Publish with GitHub Pages
-1. Create a new GitHub repository.
-2. Upload all files in this folder.
-3. Go to Settings → Pages.
-4. Under "Build and deployment", choose "Deploy from a branch".
-5. Select `main` and `/ (root)`.
-6. Save.
+Your site remains:
+https://sheri-fan.github.io/sheri.archipelago/
 
-## Next step
-The current version uses the generated island artwork as the visual scene and adds interaction on top.
-Later, the background can be replaced with a real 3D scene using Three.js or React Three Fiber while keeping the same UI and content structure.
-# sheri.archipelago
+No npm or build step is required.

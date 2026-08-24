@@ -3,9 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sheri Archipelago — 3D Prototype</title>
+  <title>Sheri Archipelago — 3D Art Prototype</title>
   <link rel="stylesheet" href="styles.css" />
-
   <script type="importmap">
   {
     "imports": {
@@ -17,29 +16,29 @@
 </head>
 <body>
   <div id="loading" class="loading">
-    <div class="loading-card">
+    <div class="loading-inner">
       <div class="loading-title">Sheri's Archipelago</div>
-      <div class="loading-subtitle">Entering the main island…</div>
+      <div class="loading-subtitle">A hand-painted world you can touch</div>
       <div class="loading-bar"><span></span></div>
     </div>
   </div>
 
   <main id="app">
-    <canvas id="world" aria-label="Interactive 3D main island"></canvas>
+    <canvas id="world"></canvas>
 
     <div class="hud top-left">
-      <div class="title">Main Island · 3D Prototype</div>
+      <div class="title">Main Island</div>
       <div class="subtitle">Drag to rotate · Scroll to zoom · Right-drag to pan</div>
     </div>
 
     <div class="hud bottom-left">
-      <div><b>Prototype goal:</b> prove the camera + real 3D space first.</div>
-      <div class="small">Visual polish will come after the movement feels right.</div>
+      <div><b>Art prototype</b> · true 3D + painterly materials</div>
+      <div class="small">Camera movement remains real 3D.</div>
     </div>
 
     <button id="resetCamera" class="reset" type="button">Reset view</button>
-
     <div id="label" class="label" hidden></div>
+    <div id="toast" class="toast" hidden></div>
   </main>
 
   <script type="module" src="main.js"></script>
