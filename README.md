@@ -1,27 +1,30 @@
-# Sheri Archipelago — 3D Art Prototype
+# Sheri Archipelago — Art-Preserving 3D Diorama
 
-This version keeps the true Three.js 3D camera and adds a stronger visual layer.
+This version uses the actual hand-painted island artwork as the visual source.
 
-## Improvements
-- Brighter Southern-European sunlight
-- Painterly procedural textures on grass, rock, wood, paper, stucco and sea
-- More detailed Message Board wall
-- Better gacha machine
-- More refined rocking horse
-- Flowers, trees, bench, mailbox and lamp
-- Softer shadows and richer depth
-- Loading screen preserved
-- Real orbit / zoom / pan camera preserved
+## What is different
+- The exact artwork is used as the scene texture.
+- The image is converted into a subdivided 3D mesh.
+- Foreground objects are pushed forward.
+- Distant islands and sky are recessed.
+- Camera movement creates real parallax.
+- Zoom is still real perspective-camera zoom.
+- Rotation is deliberately limited to about ±15° so the hand-painted image does not break visually.
 
-## Upload to GitHub Pages
-Replace the current root files in your existing repository with:
+## Why this approach
+A single image does not contain the unseen backs and sides of objects.
+Full 360° rotation requires separate real 3D models.
+
+This diorama approach is the best bridge between:
+1. preserving the exact watercolor art direction, and
+2. keeping genuine 3D camera movement.
+
+## GitHub Pages
+Upload / replace these files in the root of `sheri.archipelago`:
+
 - index.html
 - styles.css
 - main.js
+- assets/main-island-art.png
 
-Then commit to `main`.
-
-Your site remains:
-https://sheri-fan.github.io/sheri.archipelago/
-
-No npm or build step is required.
+Commit to main and GitHub Pages will update automatically.
