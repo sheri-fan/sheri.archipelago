@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hui-Ju's Island</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="loader" class="loader" aria-live="polite">
+    <div class="loader-inner">
+      <div class="cloud cloud-a"></div>
+      <div class="cloud cloud-b"></div>
+      <div class="loader-title">Hui-Ju's Island</div>
+      <div class="loader-subtitle">A little world to explore</div>
+      <div class="loader-bar"><span></span></div>
+    </div>
+  </div>
+
+  <main id="app" class="app" aria-label="Hui-Ju's Island interactive world">
+    <div class="top-ui">
+      <div class="brand">Hui-Ju's Island</div>
+      <div class="hint">Drag to look around · Scroll to zoom</div>
+    </div>
+
+    <div id="viewport" class="viewport">
+      <div id="scene" class="scene">
+        <img
+          src="assets/main-island.png"
+          alt="Bright watercolor island world with a message board, gacha machine, rocking horse, and themed islands."
+          draggable="false"
+        />
+
+        <button class="hotspot message-board" data-action="message" aria-label="Open message board">
+          <span>Message Board</span>
+        </button>
+
+        <button class="hotspot gacha" data-action="gacha" aria-label="Use gacha machine">
+          <span>Gacha</span>
+        </button>
+
+        <button class="hotspot rocking-horse" data-action="horse" aria-label="Rock the rocking horse">
+          <span>Rocking Horse</span>
+        </button>
+
+        <button class="hotspot academic" data-action="academic" aria-label="Go to Academic Island">
+          <span>Academic Island</span>
+        </button>
+
+        <button class="hotspot perfume" data-action="perfume" aria-label="Go to Perfume Garden">
+          <span>Perfume Garden</span>
+        </button>
+
+        <button class="hotspot art" data-action="art" aria-label="Go to Art Island">
+          <span>Art Island</span>
+        </button>
+
+        <button class="hotspot game" data-action="game" aria-label="Go to Game Island">
+          <span>Game Island</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="controls" aria-label="View controls">
+      <button id="zoomOut" type="button">−</button>
+      <button id="resetView" type="button">Reset</button>
+      <button id="zoomIn" type="button">＋</button>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <dialog id="modal" class="modal">
+      <button id="closeModal" class="modal-close" aria-label="Close">×</button>
+      <div id="modalContent"></div>
+    </dialog>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
