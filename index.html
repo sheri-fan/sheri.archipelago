@@ -1,80 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hui-Ju's Island</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sheri Archipelago — 3D Prototype</title>
   <link rel="stylesheet" href="styles.css" />
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.176.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.176.0/examples/jsm/"
+    }
+  }
+  </script>
 </head>
 <body>
-  <div id="loader" class="loader" aria-live="polite">
-    <div class="loader-inner">
-      <div class="cloud cloud-a"></div>
-      <div class="cloud cloud-b"></div>
-      <div class="loader-title">Hui-Ju's Island</div>
-      <div class="loader-subtitle">A little world to explore</div>
-      <div class="loader-bar"><span></span></div>
+  <div id="loading" class="loading">
+    <div class="loading-card">
+      <div class="loading-title">Sheri's Archipelago</div>
+      <div class="loading-subtitle">Entering the main island…</div>
+      <div class="loading-bar"><span></span></div>
     </div>
   </div>
 
-  <main id="app" class="app" aria-label="Hui-Ju's Island interactive world">
-    <div class="top-ui">
-      <div class="brand">Hui-Ju's Island</div>
-      <div class="hint">Drag to look around · Scroll to zoom</div>
+  <main id="app">
+    <canvas id="world" aria-label="Interactive 3D main island"></canvas>
+
+    <div class="hud top-left">
+      <div class="title">Main Island · 3D Prototype</div>
+      <div class="subtitle">Drag to rotate · Scroll to zoom · Right-drag to pan</div>
     </div>
 
-    <div id="viewport" class="viewport">
-      <div id="scene" class="scene">
-        <img
-          src="assets/main-island.png"
-          alt="Bright watercolor island world with a message board, gacha machine, rocking horse, and themed islands."
-          draggable="false"
-        />
-
-        <button class="hotspot message-board" data-action="message" aria-label="Open message board">
-          <span>Message Board</span>
-        </button>
-
-        <button class="hotspot gacha" data-action="gacha" aria-label="Use gacha machine">
-          <span>Gacha</span>
-        </button>
-
-        <button class="hotspot rocking-horse" data-action="horse" aria-label="Rock the rocking horse">
-          <span>Rocking Horse</span>
-        </button>
-
-        <button class="hotspot academic" data-action="academic" aria-label="Go to Academic Island">
-          <span>Academic Island</span>
-        </button>
-
-        <button class="hotspot perfume" data-action="perfume" aria-label="Go to Perfume Garden">
-          <span>Perfume Garden</span>
-        </button>
-
-        <button class="hotspot art" data-action="art" aria-label="Go to Art Island">
-          <span>Art Island</span>
-        </button>
-
-        <button class="hotspot game" data-action="game" aria-label="Go to Game Island">
-          <span>Game Island</span>
-        </button>
-      </div>
+    <div class="hud bottom-left">
+      <div><b>Prototype goal:</b> prove the camera + real 3D space first.</div>
+      <div class="small">Visual polish will come after the movement feels right.</div>
     </div>
 
-    <div class="controls" aria-label="View controls">
-      <button id="zoomOut" type="button">−</button>
-      <button id="resetView" type="button">Reset</button>
-      <button id="zoomIn" type="button">＋</button>
-    </div>
+    <button id="resetCamera" class="reset" type="button">Reset view</button>
 
-    <div id="toast" class="toast" role="status" aria-live="polite"></div>
-
-    <dialog id="modal" class="modal">
-      <button id="closeModal" class="modal-close" aria-label="Close">×</button>
-      <div id="modalContent"></div>
-    </dialog>
+    <div id="label" class="label" hidden></div>
   </main>
 
-  <script src="script.js"></script>
+  <script type="module" src="main.js"></script>
 </body>
 </html>
